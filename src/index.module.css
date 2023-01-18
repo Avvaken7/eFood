@@ -1,8 +1,18 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --primaryColor: #363853;
+  --secondaryColor: #FF7A50;
+}
 
 body {
+  height: 100vh;
   margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: linear-gradient(113.59deg, rgb(206 209 229) -1.95%, rgb(192 157 215 / 0%) 103.8%);
+  backdrop-filter: blur(388.5px);
+  color: var(--primaryColor);
   font-family: -apple-system, BlinkMacSystemFont, 'Rubik',
     sans-serif;
   -webkit-font-smoothing: antialiased;

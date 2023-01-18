@@ -1,3 +1,75 @@
-.primary {}
-.rounded{}
-.rounded-full{}
+/**General style for buttons**/
+.btn{
+    background: #FF7A50;    
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+/**With shadow and br5px**/
+.primary {
+    composes: btn;
+    padding: 12px 21px;
+    border-radius: 5px;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.19);
+}
+
+/**With shadow and br8px**/
+.popular{
+    composes: btn;
+    padding: 13px 47px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);   
+}
+
+/**Transparent and without shadow**/
+.popularTransparent{
+    composes: popular;
+    background: white;
+    color: #363853;
+    font-size: 20px;
+    line-height: 24px;
+    box-shadow: none;   
+}
+
+/**Without shadow and br2px**/
+.card{
+    composes: btn;
+    border-radius: 2px;
+    padding: 7px 13px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+/**With right border radius**/
+.rounded{
+    composes: btn;
+    border-radius: 30px 30px 1px 30px;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.19);
+    padding: 17px 44px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/**With right border radius and small size**/
+.food{
+    composes: rounded;
+    border-radius: 20px 20px 0px 20px;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.19);
+    padding: 5px 27px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/**With 70px border radius**/
+.full{
+    composes: btn;
+    border-radius: 70px;
+    font-weight: 500;
+    padding: 15px 33px;
+    font-size: 20px;
+    line-height: 24px;
+}
