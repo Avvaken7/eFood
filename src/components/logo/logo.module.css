@@ -11,3 +11,7 @@ p {
 p::first-letter {
     color: var(--secondaryColor);
 }
+
+p:hover {
+    cursor: pointer;
+}

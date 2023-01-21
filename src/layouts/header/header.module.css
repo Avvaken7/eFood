@@ -1,0 +1,52 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/**General view**/
+
+.topNavigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.logo {
+    margin-right: 17.4rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.125rem;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a,
+.menuLink {
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+.menu a:hover,
+.menuLink:hover {
+    transition: all 0.4s;
+    color: var(--secondaryColor);
+}
+
+
+@media (max-width: 1200px) {
+    .logo {
+        margin-right: 0;
+    }
+      
+}
