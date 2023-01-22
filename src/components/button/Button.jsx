@@ -4,7 +4,7 @@ import styles from './button.module.css';
 const Button = ({ variant, onClick, children }) => {
 
     return (
-        <a
+        <a  href="/"
             className={
                 variant === 'primary' ? `${styles.primary}` :
                 variant === 'popular' ? `${styles.popular}` :

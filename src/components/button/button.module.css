@@ -75,6 +75,10 @@
     line-height: 24px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /**Hover effects**/
 a[variant]:hover {
     background: transparent;

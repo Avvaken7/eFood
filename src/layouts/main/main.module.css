@@ -1,0 +1,23 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 9.375rem;
+}
+
+.contentTitle {
+    font-size: 4.125rem;
+    line-height: 4.875rem;
+    font-weight: 500;
+    margin: 0;    
+}

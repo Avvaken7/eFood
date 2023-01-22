@@ -1,44 +1,59 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
-import Logo from '../../components/logo/Logo';
+import logo from '../../assets/efood.svg';
 import Button from '../../components/button/Button';
 
-import { IconContext } from "react-icons";
 import { CiSearch } from 'react-icons/ci';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 import styles from './header.module.css';
 
 const Header = () => {
+    const [isActive, setActive] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+
+        const handleClick = e => {
+            setActive(!isActive);
+        };
+        const element = ref.current;
+
+        element.addEventListener('click', handleClick);
+
+        return () => {
+            element.removeEventListener('click', handleClick);
+        };
+
+    }, [isActive]);
+
     return (
         <>
             <header>
                 <div className={styles.container}>
                     <div className={styles.topNavigation}>
                         <a href="/" className={styles.logo}>
-                            <Logo />
+                            <img src={logo} alt="logo" />
                         </a>
-                        <nav className={styles.nav}>
-                            <ul className={styles.menu}>
+                        <div ref={ref} className={`${styles.menuBtn} ${isActive ? `${styles.active}` : ""}`}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav>
+                            <ul className={`${styles.menu} ${isActive ? `${styles.active}` : ""}`}>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/">Service</a></li>
                                 <li><a href="/">Top cities</a></li>
                                 <li><a href="/">Contact</a></li>
                             </ul>
                         </nav>
-
-                        <IconContext.Provider value={{ size: "1.5rem" }}>
-                            <a href="/" className={styles.menuLink}>
-                                <CiSearch />
-                            </a>
-                        </IconContext.Provider>
-
-                        <IconContext.Provider value={{ size: "1.5rem" }}>
-                            <a href="/" className={styles.menuLink}>
-                                <AiOutlineShoppingCart />
-                            </a>
-                        </IconContext.Provider>
-                        
+                        <a href="/">
+                            <CiSearch size={'1.5rem'} className={styles.menuLink} />
+                        </a>
+                        <a href="/">
+                            <AiOutlineShoppingCart size={'1.5rem'} className={styles.menuLink} />
+                        </a>
                         <Button variant={'primary'}>Sign Up</Button>
                     </div>
                 </div>
