@@ -1,0 +1,36 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.popular {
+    margin-bottom: 15rem;
+}
+
+.popularTitle {
+    text-align: center;
+}
+
+/**Help color for span**/
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+/**tabs group**/
+
+.popularTabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1.625rem;
+    padding: 0;
+    margin: 3.4rem 0 2.4rem 0;
+}
+
+.popularTabsList {
+    display: flex;
+    flex-direction: row;
+    gap: 1.625rem;
+}

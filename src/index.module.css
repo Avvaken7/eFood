@@ -1,4 +1,5 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+/* bring in normalize.css styles */
 
 :root {
   --primaryColor: #363853;
@@ -27,4 +28,13 @@ code {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 2.6875rem;
+  margin: 0;
+  padding: 0;
 }

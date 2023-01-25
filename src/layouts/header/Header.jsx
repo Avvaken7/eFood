@@ -3,8 +3,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import logo from '../../assets/efood.svg';
 import Button from '../../components/button/Button';
 
-import { CiSearch } from 'react-icons/ci';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './header.module.css';
 
@@ -48,11 +49,12 @@ const Header = () => {
                                 <li><a href="/">Contact</a></li>
                             </ul>
                         </nav>
+
                         <a href="/">
-                            <CiSearch size={'1.5rem'} className={styles.menuLink} />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className={styles.menuLink} />
                         </a>
                         <a href="/">
-                            <AiOutlineShoppingCart size={'1.5rem'} className={styles.menuLink} />
+                            <FontAwesomeIcon icon={faCartShopping} size='lg' className={styles.menuLink} />
                         </a>
                         <Button variant={'primary'}>Sign Up</Button>
                     </div>

@@ -1,6 +1,7 @@
 import './App.module.css';
 import Header from './layouts/header/Header';
 import Main from './layouts/main/Main';
+import PopularCategory from './layouts/popularCategory/PopularCategory';
 
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Main />
+      <PopularCategory />
     </div>
   );
 }
