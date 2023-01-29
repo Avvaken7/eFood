@@ -1,0 +1,48 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+.deliveryContent {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.deliveryText {
+    margin: 1.875rem 0;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+.deliveryItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+    margin-bottom: 3rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.item span {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 1.875rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}

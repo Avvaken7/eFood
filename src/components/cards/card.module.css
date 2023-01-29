@@ -1,0 +1,29 @@
+.card {
+    display: block;
+    background: white;
+    border-radius: 3.31rem .312rem;
+    max-width: 22.56rem;
+    max-height: 26.06rem;
+}
+
+.ContentTitle {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 400;
+    margin: .875rem 0 0.875rem 1.25rem;
+}
+
+.cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 0 1.25rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.img:hover {
+    opacity: .7;
+    transition: all .5s;
+}

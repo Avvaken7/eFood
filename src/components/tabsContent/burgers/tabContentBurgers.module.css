@@ -1,0 +1,22 @@
+.listItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1.375rem 1rem;
+    min-width: 11.75rem;
+    border-radius: .75rem;
+}
+
+.listItem:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.19);
+}
+
+.price {
+    font-size: .94rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    margin: .625rem 0;
+}

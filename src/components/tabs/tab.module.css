@@ -7,9 +7,14 @@
     min-width: 13.125rem;
     background-color: white;
     color: var(--primaryColor);
-    padding: 0.8125rem 0;
+    padding: 0.8125rem .25rem;
     border-radius: .5rem;
     text-transform: capitalize;
+}
+
+.active {
+    background-color: var(--secondaryColor);
+    color: white;
 }
 
 .tab:hover {
