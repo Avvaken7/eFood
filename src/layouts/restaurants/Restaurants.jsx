@@ -22,7 +22,6 @@ const Restaurants = () => {
 
     return (
         <section className={styles.container}>
-            <div className={styles.topRestaurant}></div>
             <h2 className={styles.title}>
                 Top Food <span className={styles.helpColor}>restaurant</span>
             </h2>

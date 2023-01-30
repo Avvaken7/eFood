@@ -1,0 +1,38 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+.download {
+    margin-bottom: 10.375rem;
+}
+
+.downloadWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.downloadDescription {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    opacity: .9;
+    margin: 2.3125rem 0;
+    padding-right: 2.875rem;
+}
+
+.downloadtumb {
+    display: flex;
+    flex-direction: row;
+    gap: 2.1875rem;
+}
+
+.downloadtumb img:hover {
+    transition: all 0.5s;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.3);
+}

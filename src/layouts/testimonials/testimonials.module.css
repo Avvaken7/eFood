@@ -1,0 +1,64 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+.testimonialsContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7.125rem;
+}
+
+.testimonialsTitle {
+    text-align: center;
+    margin-bottom: 3.75rem;
+}
+
+.quote {
+    font-size: 1.25rem;
+    line-height: 2.8125rem;
+    letter-spacing: 0.0313rem;
+    position: relative;
+    margin: 0;
+}
+
+.quote::before {
+    content: '';
+    background: url('../../assets/quote_left.svg') no-repeat;
+    position: absolute;
+    left: -1.875rem;
+    width: 1.4375rem;
+    height: 1.125rem;
+}
+
+.quote::after {
+    content: '';
+    background: url('../../assets/quote_right.svg') no-repeat;
+    position: absolute;
+    width: 1.4375rem;
+    height: 1.125rem;
+    bottom: -0.1875rem;
+    right: 19.4375rem;
+}
+
+.author {
+    display: block;
+    color: #FF7A50;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin: 4.625rem 0 1.125rem 0;
+}
+
+.authorRole {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    color: #aaa;
+}
