@@ -13,6 +13,7 @@
     flex-direction: row;
     align-items: center;
     gap: 7.125rem;
+    margin-bottom: 7.75rem;
 }
 
 .testimonialsTitle {
@@ -21,18 +22,24 @@
 }
 
 .quote {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
     font-size: 1.25rem;
     line-height: 2.8125rem;
     letter-spacing: 0.0313rem;
-    position: relative;
-    margin: 0;
+    padding: 0.625rem;    
 }
 
 .quote::before {
     content: '';
     background: url('../../assets/quote_left.svg') no-repeat;
     position: absolute;
-    left: -1.875rem;
+    left: 0;
+    top: 0;
     width: 1.4375rem;
     height: 1.125rem;
 }
@@ -43,8 +50,8 @@
     position: absolute;
     width: 1.4375rem;
     height: 1.125rem;
-    bottom: -0.1875rem;
-    right: 19.4375rem;
+    bottom: 0;
+    right: 0;
 }
 
 .author {
@@ -61,4 +68,21 @@
     font-size: 0.875rem;
     line-height: 1.0625rem;
     color: #aaa;
+}
+
+/** Custom buttons for swiper react **/
+.customButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.75rem;
+    position: absolute;
+    bottom: 0.9375rem;
+    right: 0;
+    z-index: 10;
+}
+
+.buttonPrev,
+.buttonNext {
+    cursor: pointer;
+    color: var(--secondaryColor);
 }

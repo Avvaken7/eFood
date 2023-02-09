@@ -6,6 +6,8 @@ import Delivery from './layouts/delivery/Delivery';
 import Restaurants from './layouts/restaurants/Restaurants';
 import Download from './layouts/download/Download';
 import Testimonials from './layouts/testimonials/Testimonials';
+import Subscribe from './layouts/subscribe/Subscribe';
+import Footer from './layouts/footer/Footer';
 
 const App = () => {
 
@@ -18,6 +20,8 @@ const App = () => {
       <Restaurants />
       <Download />
       <Testimonials/>
+      <Subscribe/>
+      <Footer />
     </div>
   );
 }

@@ -11,8 +11,7 @@ const Button = ({ variant, onClick, children }) => {
                 variant === 'transparent' ? `${styles.popularTransparent}` :
                 variant === 'rounded' ? `${styles.rounded}` :
                 variant === 'food' ? `${styles.food}` :
-                variant === 'card' ? `${styles.card}`: 
-                variant === 'full' ? `${styles.full}` :`${styles.btn}`
+                variant === 'card' ? `${styles.card}`:`${styles.btn}`
             }
             onClick={onClick}
             variant={variant}

@@ -1,0 +1,113 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+}
+
+.info img {
+    margin-right: 7px;
+}
+
+.infoLink {
+    display: flex;
+    color: #37383D;
+    line-height: 2;    
+}
+
+.infoLink:hover,
+.navItem a:hover {
+    transition: all 0.4s;
+    color: var(--secondaryColor);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6.25rem;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.125rem;
+    line-height: 3.0625rem;
+    letter-spacing: 0.01em;    
+}
+
+.navItem a {
+    color: #37383D;
+}
+
+.navItem span {    
+    font-weight: 500;   
+}
+
+.footerList {
+    display: flex;
+    flex-direction: column;   
+    padding: 0;
+    margin: 0;
+}
+
+.footerList li {
+    list-style: none;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottomFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #646464;
+    margin-bottom: 2.25rem;
+}
+
+.bottomFooter a {
+    color: #646464;
+    margin-right: 3.1875rem;
+}
+
+.bottomFooter a:hover {
+    color: var(--secondaryColor);
+    transition: all 0.4s;
+}
+
+.bottomFooter a:last-child {
+    margin-right: 0;
+}
+
+hr {
+    color: #969696;
+    opacity: .2;
+    margin: 1.5625rem 0;
+}

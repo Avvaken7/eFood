@@ -12,13 +12,14 @@
     text-transform: capitalize;
 }
 
+.tab:hover {
+    background-color: var(--secondaryColor);
+    color: white;
+    transition: all .4s;
+}
+
 .active {
     background-color: var(--secondaryColor);
     color: white;
 }
 
-.tab:hover {
-    background-color: var(--secondaryColor);
-    color: white;
-    transition: all .3s;
-}

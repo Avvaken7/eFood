@@ -4,18 +4,18 @@
     padding: 0 15px;
 }
 
+/**Help color for span**/
+
+.helpColor {
+    color: var(--secondaryColor);
+}
+
 .popular {
     margin-bottom: 5.45rem;
 }
 
 .popularTitle {
     text-align: center;
-}
-
-/**Help color for span**/
-
-.helpColor {
-    color: var(--secondaryColor);
 }
 
 /**tabs group**/

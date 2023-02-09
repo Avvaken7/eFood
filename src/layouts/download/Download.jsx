@@ -4,6 +4,7 @@ import downloadApp from '../../assets/mobileapp.png';
 import appStore from '../../assets/download_appstore.svg';
 import googlePlay from '../../assets/download_googleplay.svg';
 
+
 import styles from './download.module.css';
 
 const Download = () => {

@@ -3,8 +3,6 @@ import styles from './tab.module.css';
 
 const Tab = ({ id, activeTab, setActiveTab, children }) => {
 
-
-
     const handleClick = () => {
         setActiveTab(id);
     };
