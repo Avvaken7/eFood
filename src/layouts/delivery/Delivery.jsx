@@ -11,14 +11,14 @@ import styles from './delivery.module.css';
 const Delivery = () => {
     return (
         <section className={styles.delivery}>
-            <div className={styles.container}>
+            <div className='container'>
                 <div className={styles.deliveryContent}>
-                    <div>
+                    <div className={styles.deliveryImg}>
                         <img src={deliveryImg} alt="Delivery Guy" />
                     </div>
-                    <div>
+                    <div className={styles.deliveryDescription}>
                         <h2>
-                            <span className={styles.helpColor}>Stay</span> at home, we will Provide <span className={styles.helpColor}>good food</span>
+                            <span className='helpColor'>Stay</span> at home, we will Provide <span className='helpColor'>good food</span>
                         </h2>
                         <p className={styles.deliveryText}>We provide tasty food and superfast delivery at your home.  Let’s use our services right now and get discounts of up to 50%.</p>
                         <div className={styles.deliveryItems}>

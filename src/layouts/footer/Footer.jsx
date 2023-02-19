@@ -66,7 +66,7 @@ const Footer = () => {
 
     return (
         <footer>
-            <div className={styles.container}>
+            <div className='container'>
                 <div className={styles.content}>
                     <div className={styles.info}>
                         <a href="/" className={styles.logo}>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div className={styles.container}>
+            <div className='container'>
                 <div className={styles.bottomFooter}>
                     <span>© {year} EFood - All rights reserved.</span>
                     <div className={styles.information}>

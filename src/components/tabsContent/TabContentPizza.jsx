@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Button from '../../button/Button';
+import Button from '../button/Button';
 
-import bafallo from '../../../assets/pizza/bafallo.png';
-import carbonara from '../../../assets/pizza/carbonara.png';
-import hawaiian from '../../../assets/pizza/hawaiian.png';
-import margarita from '../../../assets/pizza/margarita.png';
-import peperoni from '../../../assets/pizza/peperoni.png';
+import bafallo from '../../assets/pizza/bafallo.png';
+import carbonara from '../../assets/pizza/carbonara.png';
+import hawaiian from '../../assets/pizza/hawaiian.png';
+import margarita from '../../assets/pizza/margarita.png';
+import peperoni from '../../assets/pizza/peperoni.png';
 
-import styles from './tabContentPizza.module.css';
+
 const TabContentPizza = ({ id, activeTab }) => {
     
     const listOfPizza = [
@@ -21,11 +21,11 @@ const TabContentPizza = ({ id, activeTab }) => {
 
     return (
         activeTab === id && listOfPizza.map(item => (
-            <div className={styles.listItem} key={item.title}>
-                <img src={item.img} alt={item.title} />
+            <div className='listItem' key={item.title}>
+                <img src={item.img} className='listItemImg' alt={item.title} />
                 <p>Rating</p>
                 <span>{item.title}</span>
-                <span className={styles.price}>${item.price}</span>
+                <span className='price'>${item.price}</span>
                 <Button variant={'card'}>Add To Cart</Button>
             </div>
         ))

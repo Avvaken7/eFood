@@ -23,3 +23,9 @@
     color: white;
 }
 
+@media (max-width: 1280px) {
+    .tab {
+        min-width: 50px;
+    }
+}
+

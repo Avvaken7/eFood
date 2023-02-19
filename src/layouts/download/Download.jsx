@@ -10,13 +10,13 @@ import styles from './download.module.css';
 const Download = () => {
     return (
         <section className={styles.download}>
-            <div className={styles.container}>
+            <div className='container'>
                 <div className={styles.downloadWrapper}>
                     <div className={styles.downloadText}>
                         <h2>
-                            Download Our <span className={styles.helpColor}>Mobile App</span>
+                            Download Our <span className='helpColor'>Mobile App</span>
                         </h2>
-                        <p className={styles.downloadDescription}>It's all at your fingertips -- the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download app and get 50% discount
+                        <p className={styles.downloadDescription}>It's all at your fingertips - the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download app and get 50% discount
                         </p>
                         <div className={styles.downloadtumb}>
                             <a href="/">

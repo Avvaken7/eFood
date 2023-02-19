@@ -6,11 +6,32 @@
     max-height: 26.06rem;
 }
 
+.cardTumblr {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+
+    .card:nth-child(1),
+    .card:nth-child(3),
+    .card:nth-child(5) {
+        justify-self: flex-end;
+    }
+
+    .card:nth-child(2),
+    .card:nth-child(4),
+    .card:nth-child(6) {
+        justify-self: flex-start;
+    }
+}
+
 .ContentTitle {
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: 400;
-    margin: .875rem 0 0.875rem 1.25rem;
+    margin: .875rem 0rem .875rem 1.25rem;
+    color: var(--primaryColor);
+    text-align: left;
 }
 
 .cta {
@@ -23,7 +44,38 @@
     font-weight: 300;
 }
 
-.img:hover {
-    opacity: .7;
-    transition: all .5s;
+.cardImg {
+    opacity: 0.7;
+}
+
+.cardImg:hover {
+    opacity: 1;
+    transition: all .8s;
+}
+
+@media (max-width: 576px) {
+
+    .card:nth-child(1),
+    .card:nth-child(3),
+    .card:nth-child(5) {
+        justify-self: auto;
+    }
+
+    .card:nth-child(2),
+    .card:nth-child(4),
+    .card:nth-child(6) {
+        justify-self: auto;
+    }
+}
+
+@media (max-width: 319px) {
+    .cta {
+        flex-direction: column;
+        margin: 0 0 1.25rem 0;
+    }
+
+    .ContentTitle {
+        margin: .875rem 0rem .875rem 0rem;
+        text-align: center;
+    }
 }

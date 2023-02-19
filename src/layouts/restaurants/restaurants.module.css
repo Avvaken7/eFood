@@ -1,13 +1,3 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.helpColor {
-    color: var(--secondaryColor);
-}
-
 .title {
     text-align: center;
     margin-bottom: 3.125rem;
@@ -19,4 +9,27 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 2.68rem;
     margin-bottom: 10.3125rem;
+}
+
+@media (max-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        gap: 5rem;
+        margin-bottom: 14.3125rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .cards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 }

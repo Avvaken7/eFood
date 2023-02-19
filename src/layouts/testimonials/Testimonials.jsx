@@ -20,12 +20,12 @@ const Testimonials = () => {
 
     return (
         <section className={styles.testimonials}>
-            <div className={styles.container}>
+            <div className='container'>
                 <h2 className={styles.testimonialsTitle}>
-                    What Our Client Are <span className={styles.helpColor}>Saying</span>
+                    What Our Client Are <span className='helpColor'>Saying</span>
                 </h2>
                 <div className={styles.testimonialsContent}>
-                    <img src={testimonialsImg} alt="testimonial" />
+                    <img src={testimonialsImg} alt="testimonial" className={styles.testimonialsTumb}/>
                     <Swiper
                         modules={[Navigation]}
                         onInit={(swiper) => {

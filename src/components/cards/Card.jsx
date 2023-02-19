@@ -8,8 +8,8 @@ import styles from './card.module.css';
 const Card = ({ img, title, timeFrom, timeTo }) => {
     return (
         <div className={styles.card}>
-            <a href="/">
-                <img src={img} alt={title} className={styles.img}/>
+            <a href="/" className={styles.cardTumblr}>
+                <img src={img} alt={title} className={styles.cardImg}/>
             </a>
             <div className={styles.cardContent}>
                 <h3 className={styles.ContentTitle}>{title}</h3>

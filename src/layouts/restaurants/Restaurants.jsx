@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from '../../components/cards/Card';
 
-import card1 from '../../assets/cards/card1.svg';
-import card2 from '../../assets/cards/card2.svg';
-import card3 from '../../assets/cards/card3.svg';
-import card4 from '../../assets/cards/card4.svg';
-import card5 from '../../assets/cards/card5.svg';
-import card6 from '../../assets/cards/card6.svg';
+import card1 from '../../assets/cards/card1.png';
+import card2 from '../../assets/cards/card2.png';
+import card3 from '../../assets/cards/card3.png';
+import card4 from '../../assets/cards/card4.png';
+import card5 from '../../assets/cards/card5.png';
+import card6 from '../../assets/cards/card6.png';
 
 import styles from './restaurants.module.css';
 const Restaurants = () => {
@@ -21,9 +21,9 @@ const Restaurants = () => {
     ]
 
     return (
-        <section className={styles.container}>
+        <section className='container'>
             <h2 className={styles.title}>
-                Top Food <span className={styles.helpColor}>restaurant</span>
+                Top Food <span className='helpColor'>restaurant</span>
             </h2>
             <div className={styles.cards}>
                 {

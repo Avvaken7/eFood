@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Button from '../../button/Button';
+import Button from '../button/Button';
 
-import burger1 from '../../../assets/burgers/burger1.svg';
-import burger2 from '../../../assets/burgers/burger2.png';
-import burger3 from '../../../assets/burgers/burger3.svg';
-import burger4 from '../../../assets/burgers/burger4.svg';
-import burger5 from '../../../assets/burgers/burger5.svg';
-
-import styles from './tabContentBurgers.module.css';
+import burger1 from '../../assets/burgers/burger1.svg';
+import burger2 from '../../assets/burgers/burger2.png';
+import burger3 from '../../assets/burgers/burger3.svg';
+import burger4 from '../../assets/burgers/burger4.svg';
+import burger5 from '../../assets/burgers/burger5.svg';
 
 const TabContentBurgers = ({ id, activeTab }) => {
 
@@ -23,11 +21,11 @@ const TabContentBurgers = ({ id, activeTab }) => {
 
     return (
         activeTab === id && listOfBurgers.map(item => (
-            <div className={styles.listItem} key={item.title}>
-                <img src={item.img} alt={item.title} />
+            <div className='listItem' key={item.title}>
+                <img src={item.img} className='listItemImg' alt={item.title} />
                 <p>Rating</p>
                 <span>{item.title}</span>
-                <span className={styles.price}>${item.price}</span>
+                <span className='price'>${item.price}</span>
                 <Button variant={'card'}>Add To Cart</Button>
             </div>
         ))

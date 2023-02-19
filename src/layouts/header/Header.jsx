@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <div className={styles.container}>
+                <div className='container'>
                     <div className={styles.topNavigation}>
                         <a href="/" className={styles.logo}>
                             <img src={logo} alt="logo" />
@@ -50,7 +50,7 @@ const Header = () => {
                             </ul>
                         </nav>
 
-                        <a href="/">
+                        <a href="/" className={styles.search}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className={styles.menuLink} />
                         </a>
                         <a href="/">

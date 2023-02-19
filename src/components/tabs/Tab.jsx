@@ -13,7 +13,7 @@ const Tab = ({ id, activeTab, setActiveTab, children }) => {
                 className={`${styles.tab} ${activeTab === id ? `${styles.active}` : ""}`}
                 onClick={handleClick}
             >
-                {children}
+               {children}
             </li>
         </>
     );
