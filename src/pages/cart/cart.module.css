@@ -33,6 +33,54 @@
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    .cartTable  {
+        border: 0;
+    }
+
+    .cartTable caption {
+        font-size: 1.3em;
+    }
+
+    .cartTable thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .cartTable tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .cartTable td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+    }
+
+    .cartTable td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .cartTable td:last-child {
+        border-bottom: 0;
+    }
+}
+
 .cartTableButton {
     width: 21px;
     height: 21px;

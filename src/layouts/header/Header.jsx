@@ -66,24 +66,24 @@ const Header = () => {
                         <nav>
                             <ul className={`${styles.menu} ${isActive ? `${styles.active}` : ""}`}>
                                 <li>
-                                    <NavLink to="/">Home</NavLink>
+                                    <NavLink to="/" onClick={() =>setActive(false)}>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/service">Service</NavLink>
+                                    <NavLink to="/service" onClick={() =>setActive(false)}>Service</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/cities">Top cities</NavLink>
+                                    <NavLink to="/cities" onClick={() =>setActive(false)}>Top cities</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/contact">Contact</NavLink>
+                                    <NavLink to="/contact" onClick={() =>setActive(false)}>Contact</NavLink>
                                 </li>
                             </ul>
                         </nav>
-                        <NavLink to='/cart' className={styles.cartShopping}>
+                        <NavLink to='/cart' className={styles.cartShopping} onClick={() =>setActive(false)}>
                             <div className={styles.isCard}>{countOfAddItem}</div>
                             <FontAwesomeIcon icon={faCartShopping} size='lg' className={styles.menuLink} />
                         </NavLink>
-                        <NavLink to='/login' className={styles.loginBtn}>
+                        <NavLink to='/login' className={styles.loginBtn} onClick={() =>setActive(false)}>
                             Sign Up
                         </NavLink>
                     </div>
