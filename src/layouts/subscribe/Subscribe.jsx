@@ -40,17 +40,17 @@ const Subscribe = () => {
                     <h3>Subscribe to the Latest Offer</h3>
                     <p className={styles.contentText}>Get our daily updates by subscribing to our newspaper, please drop your email below</p>
                     <form action="submit" className={styles.form}>
-                        <input 
-                            type="email" 
-                            onChange={validateForm} 
-                            placeholder='Enter your email addres' 
+                        <input
+                            type="email"
+                            onChange={validateForm}
+                            placeholder='Enter your email addres'
                             className={error ? styles.error : styles.inputForm}
                             required />
                         <button type="submit" onClick={handleSubmit} className={styles.buttonSubmit}>
                             <img src={icon} alt="subscribe" />
                             Subscribe
                         </button>
-                    </form>                   
+                    </form>
                 </div>
             </div>
         </section>

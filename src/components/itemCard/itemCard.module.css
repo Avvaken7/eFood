@@ -1,0 +1,21 @@
+.btnWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.productQuantityCounter {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondaryColor);
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 25% 25% 0% 25% / 0% 22% 25% 25%;
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Button from '../../components/button/Button';
 import image from '../../assets/scooter.png';
 
@@ -19,12 +21,12 @@ const Main = () => {
                                 <Button
                                     variant={'primary'}>
                                         Explore Food
-                                </Button>
-                                <a href="/" className={styles.ctaLink}>Download App</a>
+                                </Button>                                
+                                <Link to='/download' className={styles.ctaLink}>Download App</Link>
                             </div>
                         </div>
                         <div className={styles.contentImg}>
-                            <img src={image} alt="scooter guy" />                           
+                            <img src={image} alt="scooter guy" />
                         </div>
                     </section>
                 </div>

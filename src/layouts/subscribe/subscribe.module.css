@@ -52,12 +52,13 @@
 .form {
     display:flex;
     flex-direction:row;
+    justify-content: center;
 }
 
 .error {
     min-width: 748px;
     padding: 1.5rem 2.6875rem;
-    box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 20px 7.5px rgb(241 0 0 / 36%);
     border-radius: 70px;
     border: 1px solid red;
     font-size: 100%;
@@ -92,8 +93,17 @@
         flex-direction: column;
     }
 
+    .inputForm {
+        padding: 1rem 1.6875rem;
+        width: 0px;
+    }
+
+    .error {
+        padding: 1rem 1.6875rem;
+    }
+
     .contentBlock input {
-        min-width: 75%;
+       min-width: 80%;
     }
 
     .buttonSubmit {
@@ -104,7 +114,7 @@
 
 @media screen and (max-width: 319px) {
     .contentBlock input {
-        min-width: 50%;
+        min-width: 75%;
     }
 
 }

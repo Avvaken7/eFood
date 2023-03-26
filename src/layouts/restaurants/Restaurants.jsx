@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../components/cards/Card';
+import RestaurantCard from '../../components/cards/RestaurantCard';
 
 import card1 from '../../assets/cards/card1.png';
 import card2 from '../../assets/cards/card2.png';
@@ -28,7 +28,7 @@ const Restaurants = () => {
             <div className={styles.cards}>
                 {
                     listOfCards.map(item => (
-                        <Card
+                        <RestaurantCard
                             key={item.id}
                             img={item.img}
                             title={item.title}

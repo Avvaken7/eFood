@@ -1,0 +1,41 @@
+.lognFormWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.formData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formData span {
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.inputForm {
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.submitFormButton {
+    background: var(--secondaryColor);
+    border-radius: .3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--secondaryColor);
+}
+
+.submitFormButton:hover {
+    transition: all .4s;
+    color: var(--secondaryColor);
+    background: transparent;
+}

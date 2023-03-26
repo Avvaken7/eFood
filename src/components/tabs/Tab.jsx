@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './tab.module.css';
 
-const Tab = ({ id, activeTab, setActiveTab, children }) => {
+const Tab = ({ tabId, activeTab, setActiveTab, children }) => {
 
     const handleClick = () => {
-        setActiveTab(id);
+        setActiveTab(tabId);
     };
 
     return (
         <>
             <li
-                className={`${styles.tab} ${activeTab === id ? `${styles.active}` : ""}`}
+                className={`${styles.tab} ${activeTab === tabId ? `${styles.active}` : ""}`}
                 onClick={handleClick}
             >
                {children}

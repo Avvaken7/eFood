@@ -1,27 +1,14 @@
 import React from 'react';
-import Button from '../button/Button';
 
-import menu from '../../assets/setMenu/menu.jpg'
+import ItemCard from '../itemCard/ItemCard';
+import { listOfProducts } from '../../ProductsArray';
 
-
-const TabContentSetMenu = ({ id, activeTab }) => {
-
-    const listOfMenu = [
-        { title: 'Soup1', img: `${menu}`, price: '12.00' },
-        { title: 'Soup2', img: `${menu}`, price: '10.00' },
-        { title: 'Soup3', img: `${menu}`, price: '21.00' },
-        { title: 'Soup4', img: `${menu}`, price: '52.00' },
-        { title: 'Soup5', img: `${menu}`, price: '13.00' }
-    ]
+const TabContentSetMenu = ({ tabId, activeTab }) => {
 
     return (
-        activeTab === id && listOfMenu.map(item => (
-            <div className='listItem' key={item.title}>
-                <img src={item.img} className='listItemImg' alt={item.title} />
-                <p>Rating</p>
-                <span>{item.title}</span>
-                <span className='price'>${item.price}</span>
-                <Button variant={'card'}>Add To Cart</Button>
+        activeTab === tabId && listOfProducts.slice(20, 25).map(item => (
+            <div className='listItem' key={item.id}>
+                <ItemCard item={item} />
             </div>
         ))
     );

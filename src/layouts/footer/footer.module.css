@@ -72,6 +72,15 @@
     align-items: center;
 }
 
+.socialLink svg {
+    fill: #37383D;
+}
+
+.socialLink svg:hover {
+    transition: all .4s;
+    fill: var(--secondaryColor);
+}
+
 .bottomFooter {
     display: flex;
     flex-direction: row;
@@ -140,7 +149,7 @@ hr {
     }
 
     .social {
-        gap: 0.625rem;
+        gap: 1.5rem;
     }
 }
 

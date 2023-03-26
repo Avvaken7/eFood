@@ -3,13 +3,12 @@ import React from 'react';
 import logo from '../../assets/efood.svg';
 import call from '../../assets/footer/Calling.svg';
 import loc from '../../assets/footer/Location.svg';
-
-import fb from '../../assets/footer/social/facebook.svg';
-import tw from '../../assets/footer/social/twitter.svg';
-import inst from '../../assets/footer/social/instagram.svg';
-import pin from '../../assets/footer/social/pinterset.svg';
-
 import message from '../../assets/footer/Message.svg';
+
+import { ReactComponent as FacebookLogo } from '../../assets/footer/social/facebook.svg';
+import { ReactComponent as TwitterLogo } from '../../assets/footer/social/twitter.svg';
+import { ReactComponent as InstagramLogo } from '../../assets/footer/social/instagram.svg';
+import { ReactComponent as PinterestLogo } from '../../assets/footer/social/pinterset.svg';
 
 import styles from './footer.module.css';
 
@@ -60,8 +59,8 @@ const Footer = () => {
         </li>
     });
 
-    const today = new Date(); 
-    const year = today.getFullYear(); 
+    const today = new Date();
+    const year = today.getFullYear();
 
 
     return (
@@ -85,10 +84,18 @@ const Footer = () => {
                             support@efood.com
                         </a>
                         <div className={styles.social}>
-                            <a href="/" className={styles.socialLink}><img src={fb} alt="facebook" /></a>
-                            <a href="/" className={styles.socialLink}><img src={tw} alt="twitter" /></a>
-                            <a href="/" className={styles.socialLink}><img src={inst} alt="instagram" /></a>
-                            <a href="/" className={styles.socialLink}><img src={pin} alt="pinterest" /></a>
+                            <a href="/" className={styles.socialLink}>
+                                <FacebookLogo />
+                            </a>
+                            <a href="/" className={styles.socialLink}>
+                                <TwitterLogo />
+                            </a>
+                            <a href="/" className={styles.socialLink}>
+                                <InstagramLogo />
+                            </a>
+                            <a href="/" className={styles.socialLink}>
+                                <PinterestLogo />
+                            </a>
                         </div>
                     </div>
                     <div className={styles.nav}>

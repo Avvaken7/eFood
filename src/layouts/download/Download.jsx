@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import downloadApp from '../../assets/mobileapp.png';
 import appStore from '../../assets/download_appstore.svg';
@@ -19,12 +20,12 @@ const Download = () => {
                         <p className={styles.downloadDescription}>It's all at your fingertips - the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download app and get 50% discount
                         </p>
                         <div className={styles.downloadtumb}>
-                            <a href="/">
+                            <Link to="/download">
                                 <img src={appStore} alt="download from app store" />
-                            </a>
-                            <a href="/">
+                            </Link>
+                            <Link to="/download">
                                 <img src={googlePlay} alt="download from google play" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.downloadImg}>

@@ -1,20 +1,26 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useContext } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { CartContext } from '../../CartContext';
 
 import logo from '../../assets/efood.svg';
-import Button from '../../components/button/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './header.module.css';
 
 const Header = () => {
+    const cart = useContext(CartContext);
+
     const [isActive, setActive] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+
     const ref = useRef(null);
+    const headerRef = useRef(null);
+
+    const countOfAddItem = cart.getItemCount();
 
     useEffect(() => {
-
         const handleClick = e => {
             setActive(!isActive);
         };
@@ -28,14 +34,30 @@ const Header = () => {
 
     }, [isActive]);
 
+    useEffect(() => {
+        const header = headerRef.current;
+        const sticky = header.offsetTop;
+        const handleScroll = () => {
+            if (window.pageYOffset > sticky) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <header>
+            <header ref={headerRef} className={`${isSticky ? styles.headerSticky : ""}`}>
                 <div className='container'>
                     <div className={styles.topNavigation}>
-                        <a href="/" className={styles.logo}>
+                        <Link to='/' className={styles.logo}>
                             <img src={logo} alt="logo" />
-                        </a>
+                        </Link>
                         <div ref={ref} className={`${styles.menuBtn} ${isActive ? `${styles.active}` : ""}`}>
                             <span></span>
                             <span></span>
@@ -43,20 +65,27 @@ const Header = () => {
                         </div>
                         <nav>
                             <ul className={`${styles.menu} ${isActive ? `${styles.active}` : ""}`}>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/">Service</a></li>
-                                <li><a href="/">Top cities</a></li>
-                                <li><a href="/">Contact</a></li>
+                                <li>
+                                    <NavLink to="/">Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/service">Service</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/cities">Top cities</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/contact">Contact</NavLink>
+                                </li>
                             </ul>
                         </nav>
-
-                        <a href="/" className={styles.search}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className={styles.menuLink} />
-                        </a>
-                        <a href="/">
+                        <NavLink to='/cart' className={styles.cartShopping}>
+                            <div className={styles.isCard}>{countOfAddItem}</div>
                             <FontAwesomeIcon icon={faCartShopping} size='lg' className={styles.menuLink} />
-                        </a>
-                        <Button variant={'primary'}>Sign Up</Button>
+                        </NavLink>
+                        <NavLink to='/login' className={styles.loginBtn}>
+                            Sign Up
+                        </NavLink>
                     </div>
                 </div>
             </header>

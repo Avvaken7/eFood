@@ -66,14 +66,42 @@
     line-height: 18px;
 }
 
+.success {
+    composes: primary;
+    background: #03862a;
+    border: 1px solid #03862a;
+    padding: 11px 13px;
+}
+
+.count {
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.count:last-child {
+    margin-right: 0;
+    margin-left: 7px;
+}
+
 a {
     text-decoration: none;
 }
 
 /**Hover effects**/
-a[variant]:hover {
+button[variant]:hover {
     background: transparent;
-    color: var(--secondaryColor);    
+    color: var(--secondaryColor);
     box-shadow: none;
-    transition: all .7s;    
+    transition: all .7s;
+}
+
+button[variant='success']:hover {
+    background: transparent;
+    color: #03862a;
+    box-shadow: none;
+    transition: all .7s;
 }

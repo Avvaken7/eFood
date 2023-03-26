@@ -1,0 +1,45 @@
+.contactWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 5rem 0rem;
+}
+
+.contactTitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 50%;
+}
+
+.contactInputForm {
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.contactSubmitButton {
+    background: var(--secondaryColor);
+    border-radius: .3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--secondaryColor);
+}
+
+.contactSubmitButton:hover {
+    transition: all .4s;
+    color: var(--secondaryColor);
+    background: transparent;
+}
