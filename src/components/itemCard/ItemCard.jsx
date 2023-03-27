@@ -26,8 +26,8 @@ const ItemCard = (props) => {
                     ?
                     <>
                         <div className={styles.btnWrapper}>
-                            <Button variant={'card'} onClick={() => cart.addToCart(item.id)}>+</Button>
                             <Button variant={'card'} onClick={() => cart.removeFromCart(item.id)}>-</Button>
+                            <Button variant={'card'} onClick={() => cart.addToCart(item.id)}>+</Button>
                             <Button variant={'card'} onClick={() => cart.deleteFromCart(item.id)}>x</Button>
                         </div>
                     </>
