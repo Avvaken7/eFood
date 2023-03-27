@@ -1,6 +1,6 @@
 .content {
     display: flex;
-    margin: 9.375rem 0 5.875rem 0;
+    margin: 4.375rem 0 5.875rem 0;
 }
 
 @media (max-width: 1280px) {

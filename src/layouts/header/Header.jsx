@@ -37,6 +37,7 @@ const Header = () => {
     useEffect(() => {
         const header = headerRef.current;
         const sticky = header.offsetTop;
+        
         const handleScroll = () => {
             if (window.pageYOffset > sticky) {
                 setIsSticky(true);
