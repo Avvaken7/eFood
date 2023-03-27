@@ -9,14 +9,8 @@
     transition: padding 0.3s;
 }
 
-.headerSticky + .topNavigation {
-    margin-top: 0px;
-    transition: margin 0.3s;
-}
-
 .headerSticky + main {
-    padding-top: 100px;
-    margin-top: -50px;
+    padding-top: 102px;
 }
 
 .topNavigation {
