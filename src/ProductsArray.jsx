@@ -52,17 +52,18 @@ const listOfProducts = [
     { id: 25, title: 'Spaghetti Bolognese', img: `${bolognese}`, price: 23 }
 ]
 
-function getItemData (id) {
-    let itemData = listOfProducts.find(item => item.id === id);
-
-    if (itemData === undefined) {
-        console.log('item does no exist fo ID:' + id)
-        return undefined
+    function getItemData(id) {
+        let itemData = listOfProducts.find(item => item.id === id);
+    
+        if (itemData === undefined) {
+            console.log('item does no exist for ID:' + id)
+            return undefined
+        }
+    
+        return itemData;
+    
     }
 
-    return itemData;
+export { listOfProducts, getItemData };
 
-}
-
-export {listOfProducts, getItemData};
 

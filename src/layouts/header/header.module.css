@@ -18,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .logo {
@@ -139,7 +139,7 @@ ul.menu li a.active {
     }
 
     .topNavigation {
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .menu {
@@ -232,4 +232,17 @@ ul.menu li a.active {
     .topNavigation {
         justify-content: space-between;
     }
+}
+
+/** Users styles**/
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.userPhoto {
+    width: 20px;
+    height: 20px;
 }

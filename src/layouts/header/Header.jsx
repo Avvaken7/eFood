@@ -1,27 +1,51 @@
 import React, { useRef, useEffect, useState, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { CartContext } from '../../CartContext';
+import { googleSignIn, googleLogout } from '../../helpers/Authentication';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../firebase';
 
 import logo from '../../assets/efood.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './header.module.css';
+
 
 const Header = () => {
     const cart = useContext(CartContext);
 
+    const [user, setUser] = useState({});
     const [isActive, setActive] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
     const ref = useRef(null);
     const headerRef = useRef(null);
 
+
     const countOfAddItem = cart.getItemCount();
 
+    const handleGoogleSignIn = async () => {
+        try {
+            googleSignIn();
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
-        const handleClick = e => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            console.log('User', currentUser);
+        });
+        return () => {
+            unsubscribe();
+        }
+    }, [])
+
+    useEffect(() => {
+        const handleClick = () => {
             setActive(!isActive);
         };
         const element = ref.current;
@@ -37,7 +61,7 @@ const Header = () => {
     useEffect(() => {
         const header = headerRef.current;
         const sticky = header.offsetTop;
-        
+
         const handleScroll = () => {
             if (window.pageYOffset > sticky) {
                 setIsSticky(true);
@@ -50,6 +74,8 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+
 
     return (
         <>
@@ -67,26 +93,43 @@ const Header = () => {
                         <nav>
                             <ul className={`${styles.menu} ${isActive ? `${styles.active}` : ""}`}>
                                 <li>
-                                    <NavLink to="/" onClick={() =>setActive(false)}>Home</NavLink>
+                                    <NavLink to="/" onClick={() => setActive(false)}>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/service" onClick={() =>setActive(false)}>Service</NavLink>
+                                    <NavLink to="/service" onClick={() => setActive(false)}>Service</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/cities" onClick={() =>setActive(false)}>Top cities</NavLink>
+                                    <NavLink to="/products" onClick={() => setActive(false)}>Products</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/contact" onClick={() =>setActive(false)}>Contact</NavLink>
+                                    <NavLink to="/contact" onClick={() => setActive(false)}>Contact</NavLink>
                                 </li>
                             </ul>
                         </nav>
-                        <NavLink to='/cart' className={styles.cartShopping} onClick={() =>setActive(false)}>
+                        <NavLink to='/cart' className={styles.cartShopping} onClick={() => setActive(false)}>
                             <div className={styles.isCard}>{countOfAddItem}</div>
                             <FontAwesomeIcon icon={faCartShopping} size='lg' className={styles.menuLink} />
                         </NavLink>
-                        <NavLink to='/login' className={styles.loginBtn} onClick={() =>setActive(false)}>
-                            Sign Up
-                        </NavLink>
+                        {
+                            user?.displayName ?
+                                <>
+                                    <div className={styles.user}>
+                                        <h4>{user?.displayName}</h4>
+                                        <div className={styles.userPhoto}>
+                                            <img src={user.photoURL} alt="avatar" />
+                                            <button onClick={googleLogout}>
+                                                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </>
+                                :
+                                <NavLink className={styles.loginBtn} onClick={handleGoogleSignIn}>
+                                    Sign In
+                                </NavLink>
+                        }
+
                     </div>
                 </div>
             </header>

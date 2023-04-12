@@ -21,13 +21,6 @@ const LoginPage = () => {
                         />
                         {errors.firstName && <span>This field is required</span>}
                         <input
-                            {...register("lastName",
-                                { required: true })}
-                            placeholder="Last name"
-                            className={styles.inputForm}
-                        />
-                        {errors.lastName && <span>This field is required</span>}
-                        <input
                             {...register("email",
                                 {
                                     pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
@@ -36,8 +29,15 @@ const LoginPage = () => {
                             placeholder="Email"
                             className={styles.inputForm}
                         />
-                        {errors.email && <span>This email is incorrect</span>}
-                        <input type="submit" value='Sign Up' className={styles.submitFormButton}/>
+                         {errors.email && <span>This email is incorrect</span>}
+                        <input
+                            {...register("password",
+                                { required: true, minLength: 8 })}
+                            placeholder="Password"
+                            className={styles.inputForm}
+                        />
+                        {errors.password && <span>This field is required</span>}                       
+                        <input type="submit" value='Sign Up' className={styles.submitFormButton} />
                     </form>
                 </div>
             </div>
