@@ -114,14 +114,19 @@ const Header = () => {
                             user?.displayName ?
                                 <>
                                     <div className={styles.user}>
-                                        <h4>{user?.displayName}</h4>
                                         <div className={styles.userPhoto}>
+                                            <div className={styles.userInfo}>
+                                                <h4>Hi, {user.displayName}!</h4>
+                                                <div className={styles.userEmail}>
+                                                    <span className={styles.userLabel}>email:</span>
+                                                    <p>{user.email}</p>
+                                                </div>                                             
+                                            </div>
                                             <img src={user.photoURL} alt="avatar" />
-                                            <button onClick={googleLogout}>
-                                                <FontAwesomeIcon icon={faArrowRightFromBracket} />
-                                            </button>
                                         </div>
-
+                                        <button className={styles.logOutButton} onClick={googleLogout}>
+                                            <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                                        </button>
                                     </div>
                                 </>
                                 :
