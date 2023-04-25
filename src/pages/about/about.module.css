@@ -9,7 +9,7 @@
     flex-direction: column;
     background: url("../../assets/blobanimation.svg") no-repeat center;
     height: 100vh;
-    margin-top: 3rem;
+    margin: 3rem 0rem;
 }
 
 .about p {
