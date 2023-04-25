@@ -8,7 +8,7 @@ const NoMatch = () => {
             <div className="container">
                 <div className={styles.notFoundPage}>
                     <h1 className={styles.title}>404</h1>
-                    <h2 className={styles.description}>Page is no found</h2>
+                    <h2 className={styles.description}>Page is not found</h2>
                 </div>
             </div>
 

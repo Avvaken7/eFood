@@ -84,16 +84,16 @@ const Footer = () => {
                             support@efood.com
                         </a>
                         <div className={styles.social}>
-                            <a href="/" className={styles.socialLink}>
+                            <a href="/" className={styles.socialLinkFacebook}>
                                 <FacebookLogo />
                             </a>
-                            <a href="/" className={styles.socialLink}>
+                            <a href="/" className={styles.socialLinkTwitter}>
                                 <TwitterLogo />
                             </a>
-                            <a href="/" className={styles.socialLink}>
+                            <a href="/" className={styles.socialLinkInsta}>
                                 <InstagramLogo />
                             </a>
-                            <a href="/" className={styles.socialLink}>
+                            <a href="/" className={styles.socialLinkPint}>
                                 <PinterestLogo />
                             </a>
                         </div>

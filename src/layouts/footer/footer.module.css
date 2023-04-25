@@ -72,13 +72,28 @@
     align-items: center;
 }
 
-.socialLink svg {
+.social svg {
     fill: #37383D;
 }
 
-.socialLink svg:hover {
+.socialLinkFacebook svg:hover {
     transition: all .4s;
-    fill: var(--secondaryColor);
+    fill: #224499;
+}
+
+.socialLinkTwitter svg:hover {
+    transition: all .4s;
+    fill: #149cfe;
+}
+
+.socialLinkInsta svg:hover {
+    transition: all .4s;
+    fill: #fd2c20;
+}
+
+.socialLinkPint svg:hover {
+    transition: all .4s;
+    fill: #df111b;
 }
 
 .bottomFooter {
