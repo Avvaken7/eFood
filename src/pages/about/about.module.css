@@ -1,0 +1,19 @@
+.title {
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url("../../assets/blobanimation.svg") no-repeat center;
+    height: 100vh;
+    margin-top: 3rem;
+}
+
+.about p {
+    text-indent: 3ch;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}

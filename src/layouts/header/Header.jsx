@@ -99,7 +99,7 @@ const Header = () => {
                                     <NavLink to="/service" onClick={() => setActive(false)}>Service</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/products" onClick={() => setActive(false)}>Products</NavLink>
+                                    <NavLink to="/about" onClick={() => setActive(false)}>About Us</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/contact" onClick={() => setActive(false)}>Contact</NavLink>

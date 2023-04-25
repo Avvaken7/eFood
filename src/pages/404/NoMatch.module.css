@@ -1,0 +1,17 @@
+.notFoundPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 75vh;
+    background: url('../../assets/blobanimation.svg') no-repeat center;
+}
+
+.title {
+    font-size: 6rem;
+}
+
+.description {
+    font-size: 3rem;
+}

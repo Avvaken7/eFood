@@ -5,7 +5,7 @@ import { Header, Footer } from './layouts';
 import {
   HomePage,
   ServicePage,
-  ProductsPage,
+  About,
   Contact,
   DownloadApplication,
   LoginPage,
@@ -26,7 +26,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<HomePage />}></Route>
             <Route path='/service' element={<ServicePage />}></Route>
-            <Route path='/products' element={<ProductsPage />}></Route>
+            <Route path='/about' element={<About />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
