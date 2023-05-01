@@ -14,6 +14,7 @@ Website for ordering food in any corner of your city.
  - [React Hook Form](https://react-hook-form.com/)
  - [React Router Dom](https://reactrouter.com/en/main)
  - [React Font Awesome](https://fontawesome.com/v5/docs/web/use-with/react)
+ - Pure css is used for styling
 
  
 
