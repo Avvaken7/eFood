@@ -20,12 +20,12 @@ const Download = () => {
                         <p className={styles.downloadDescription}>It's all at your fingertips - the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download app and get 50% discount
                         </p>
                         <div className={styles.downloadtumb}>
-                            <Link to="/download">
+                            <a href='#'>
                                 <img src={appStore} alt="download from app store" />
-                            </Link>
-                            <Link to="/download">
+                            </a>
+                            <a href='#'>
                                 <img src={googlePlay} alt="download from google play" />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className={styles.downloadImg}>

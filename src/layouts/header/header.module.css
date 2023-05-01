@@ -9,7 +9,7 @@
     transition: padding 0.3s;
 }
 
-.headerSticky + main {
+.headerSticky+main {
     padding-top: 102px;
 }
 
@@ -57,6 +57,7 @@
 }
 
 .menu li {
+    position: relative;
     list-style: none;
 }
 
@@ -66,14 +67,30 @@
     color: var(--primaryColor);
 }
 
-ul.menu li a.active {
-    color: var(--secondaryColor);
-}
-
 .menu a:hover,
 .menuLink:hover {
     transition: all 0.4s;
     color: var(--secondaryColor);
+}
+
+.menu a[aria-current="page"] {
+    color: var(--secondaryColor);
+}
+
+.menu a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.menu a:hover::before {
+    width: 100%;
+    margin-top: 2px;
 }
 
 /** Card Shopping Style **/
@@ -166,17 +183,17 @@ ul.menu li a.active {
     }
 
     /* Replace burger icon when is open */
-    .menuBtn.active span:nth-of-type(1) {
+    .menuBtn.activeMenu span:nth-of-type(1) {
         width: 0;
         opacity: 0;
     }
 
-    .menuBtn.active span:nth-of-type(2) {
+    .menuBtn.activeMenu span:nth-of-type(2) {
         top: 50%;
         transform: translate(-50%, 0%) rotate(45deg);
     }
 
-    .menuBtn.active span:nth-of-type(3) {
+    .menuBtn.activeMenu span:nth-of-type(3) {
         top: 50%;
         transform: translate(-50%, 0%) rotate(-45deg);
     }
@@ -197,7 +214,7 @@ ul.menu li a.active {
         z-index: 1;
     }
 
-    .menu.active {
+    .menu.activeMenu {
         transform: translateX(0);
         transition: transform 0.5s;
     }
@@ -220,8 +237,6 @@ ul.menu li a.active {
     .menu {
         font-size: 1.8rem;
     }
-
-
 }
 
 @media (max-width: 375px) {
@@ -243,7 +258,7 @@ ul.menu li a.active {
 }
 
 .userPhoto {
-    position: relative;    
+    position: relative;
     border-radius: 100%;
     background-color: white;
     padding: 2px;
@@ -261,7 +276,7 @@ ul.menu li a.active {
     border-radius: 50%;
 }
 
-.userPhoto:hover > .userInfo  {
+.userPhoto:hover>.userInfo {
     display: flex;
 }
 
@@ -269,7 +284,7 @@ ul.menu li a.active {
     display: none;
     position: absolute;
     top: 33px;
-    right: 0;    
+    right: 0;
     flex-direction: column;
     gap: 10px;
     background-color: white;
@@ -277,7 +292,7 @@ ul.menu li a.active {
     border-radius: 5px;
 }
 
-.userInfo > * {
+.userInfo>* {
     margin: 0;
 }
 

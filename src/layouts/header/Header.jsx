@@ -17,7 +17,7 @@ const Header = () => {
     const cart = useContext(CartContext);
 
     const [user, setUser] = useState({});
-    const [isActive, setActive] = useState(false);
+    const [isActiveMenu, setActiveMenu] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
     const ref = useRef(null);
@@ -45,7 +45,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleClick = () => {
-            setActive(!isActive);
+            setActiveMenu(!isActiveMenu);
         };
         const element = ref.current;
 
@@ -55,7 +55,7 @@ const Header = () => {
             element.removeEventListener('click', handleClick);
         };
 
-    }, [isActive]);
+    }, [isActiveMenu]);
 
     useEffect(() => {
         const header = headerRef.current;
@@ -84,28 +84,28 @@ const Header = () => {
                         <Link to='/' className={styles.logo}>
                             <img src={logo} alt="logo" />
                         </Link>
-                        <div ref={ref} className={`${styles.menuBtn} ${isActive ? `${styles.active}` : ""}`}>
+                        <div ref={ref} className={`${styles.menuBtn} ${isActiveMenu ? `${styles.activeMenu}` : ""}`}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                         <nav>
-                            <ul className={`${styles.menu} ${isActive ? `${styles.active}` : ""}`}>
+                            <ul className={`${styles.menu} ${isActiveMenu ? `${styles.activeMenu}` : ""}`}>
                                 <li>
-                                    <NavLink to="/" onClick={() => setActive(false)}>Home</NavLink>
+                                    <NavLink to="/" onClick={() => setActiveMenu(false)}>Home</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/service" onClick={() => setActive(false)}>Service</NavLink>
+                                    <NavLink to="/service" onClick={() => setActiveMenu(false)}>Service</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/about" onClick={() => setActive(false)}>About Us</NavLink>
+                                    <NavLink to="/about" onClick={() => setActiveMenu(false)}>About Us</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/contact" onClick={() => setActive(false)}>Contact</NavLink>
+                                    <NavLink to="/contact" onClick={() => setActiveMenu(false)}>Contact</NavLink>
                                 </li>
                             </ul>
                         </nav>
-                        <NavLink to='/cart' className={styles.cartShopping} onClick={() => setActive(false)}>
+                        <NavLink to='/cart' className={styles.cartShopping} onClick={() => setActiveMenu(false)}>
                             <div className={styles.isCard}>{countOfAddItem}</div>
                             <FontAwesomeIcon icon={faCartShopping} size='lg' className={styles.menuLink} />
                         </NavLink>

@@ -23,7 +23,6 @@ const Subscribe = () => {
         e.preventDefault();
         if (input && input.match(isValidEmail)) {
             saveEmail(input);
-            setInput("Thanks for subscribing!");
         } else {
             console.log("Email invalid!");
         }

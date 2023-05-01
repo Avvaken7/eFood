@@ -66,6 +66,16 @@
     line-height: 18px;
 }
 
+.ctaLink {
+    color: var(--primaryColor);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    border: 1px solid transparent;
+    padding: .65rem 1.2rem;
+    border-radius: 5px;
+    background: transparent;
+}
+
 .success {
     composes: primary;
     background: #03862a;
@@ -104,4 +114,11 @@ button[variant='success']:hover {
     color: #03862a;
     box-shadow: none;
     transition: all .7s;
+}
+
+button[variant='cta']:hover {
+    border: 1px solid var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0px 22px 40px rgba(255, 104, 56, 0.19);
 }

@@ -13,6 +13,7 @@ const Button = ({ variant, onClick, children, ...other }) => {
                 variant === 'food' ? `${styles.food}` :
                 variant === 'success' ? `${styles.success}` :
                 variant === 'count' ? `${styles.count}` :
+                variant === 'cta' ? `${styles.ctaLink}` :
                 variant === 'card' ? `${styles.card}`:`${styles.btn}`
             }
             onClick={onClick}

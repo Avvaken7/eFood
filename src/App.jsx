@@ -7,7 +7,6 @@ import {
   ServicePage,
   About,
   Contact,
-  DownloadApplication,
   LoginPage,
   Cart,
   NoMatch
@@ -30,7 +29,6 @@ const App = () => {
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
-            <Route path='/download' element={<DownloadApplication />}></Route>
             <Route path='*' element={<NoMatch />}></Route>
           </Routes>
           <Footer />

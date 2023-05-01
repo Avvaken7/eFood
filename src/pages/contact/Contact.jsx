@@ -5,8 +5,11 @@ import styles from './contact.module.css';
 
 const Contact = () => {
 
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = (data) => {
+        console.log(data);
+        reset();
+    }
     
 
     return (
@@ -40,7 +43,7 @@ const Contact = () => {
                         <input
                             type="submit"
                             value='Submit'
-                            className={styles.contactSubmitButton} 
+                            className={styles.contactSubmitButton}
                         />
                     </form>
                 </div>

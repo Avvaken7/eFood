@@ -48,7 +48,7 @@ const Cart = () => {
                             </tbody>
                         </table>
                         :
-                        <h1>There are no items in your cart</h1>
+                        <h1 className={styles.title}>There are no items in your cart</h1>
                 }
             </div>
         </>
