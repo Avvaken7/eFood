@@ -1,12 +1,12 @@
 import React from 'react';
 import RestaurantCard from '../../components/cards/RestaurantCard';
 
-import card1 from '../../assets/cards/card1.png';
-import card2 from '../../assets/cards/card2.png';
-import card3 from '../../assets/cards/card3.png';
-import card4 from '../../assets/cards/card4.png';
-import card5 from '../../assets/cards/card5.png';
-import card6 from '../../assets/cards/card6.png';
+import card1 from '../../assets/cards/card1.webp';
+import card2 from '../../assets/cards/card2.webp';
+import card3 from '../../assets/cards/card3.webp';
+import card4 from '../../assets/cards/card4.webp';
+import card5 from '../../assets/cards/card5.webp';
+import card6 from '../../assets/cards/card6.webp';
 
 import styles from './restaurants.module.css';
 const Restaurants = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from '../../components/button/Button';
-import image from '../../assets/scooter.png';
+import image from '../../assets/scooter.webp';
 
 import styles from './main.module.css';
 

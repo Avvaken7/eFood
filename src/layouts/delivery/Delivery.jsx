@@ -4,7 +4,7 @@ import Button from '../../components/button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStopwatch, faTruckFast, faShop } from '@fortawesome/free-solid-svg-icons';
 
-import deliveryImg from '../../assets/foodDelivery.png';
+import deliveryImg from '../../assets/foodDelivery.webp';
 
 import styles from './delivery.module.css';
 

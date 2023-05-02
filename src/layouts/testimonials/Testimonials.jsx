@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
-import testimonialsImg from '../../assets/testimonials.png';
+import testimonialsImg from '../../assets/testimonials.webp';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

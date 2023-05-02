@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import downloadApp from '../../assets/mobileapp.png';
+import downloadApp from '../../assets/mobileapp.webp';
 import appStore from '../../assets/download_appstore.svg';
 import googlePlay from '../../assets/download_googleplay.svg';
 

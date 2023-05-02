@@ -1,28 +1,32 @@
-import beefBulgogi from './assets/asian/BeefBulgogi.png';
-import gaengKiewWanGoong from './assets/asian/Gaeng-Kiew-Wan-Goong.png';
-import ramen from './assets/asian/ramen.png';
-import sushi from './assets/asian/sushi.jpg';
-import wontonNoodleSoup from './assets/asian/wonton-noodle-soup.jpg';
-import burger1 from './assets/burgers/burger1.svg';
-import burger2 from './assets/burgers/burger2.png';
-import burger3 from './assets/burgers/burger3.svg';
-import burger4 from './assets/burgers/burger4.svg';
-import burger5 from './assets/burgers/burger5.svg';
-import france from './assets/hotdogs/france.png';
-import michigan from './assets/hotdogs/michigan.png';
-import coney from './assets/hotdogs/coney.png';
-import italian from './assets/hotdogs/Italian.png';
-import chili from './assets/hotdogs/chili.png';
-import bafallo from './assets/pizza/bafallo.png';
-import carbonara from './assets/pizza/carbonara.png';
-import hawaiian from './assets/pizza/hawaiian.png';
-import margarita from './assets/pizza/margarita.png';
-import peperoni from './assets/pizza/peperoni.png';
-import free from './assets/setMenu/freepotates.jpg';
-import salmon from './assets/setMenu/salmon.jpg';
-import bbq from './assets/setMenu/bbq.jpg';
-import bolognese from './assets/setMenu/spaghetti-bolognese.jpg';
-import carbonaraSp from './assets/setMenu/spaghetti-carbonara.jpg';
+import beefBulgogi from './assets/asian/BeefBulgogi.webp';
+import gaengKiewWanGoong from './assets/asian/Gaeng-Kiew-Wan-Goong.webp';
+import ramen from './assets/asian/ramen.webp';
+import sushi from './assets/asian/sushi.webp';
+import wontonNoodleSoup from './assets/asian/wonton-noodle-soup.webp';
+
+import burger1 from './assets/burgers/burger1.webp';
+import burger2 from './assets/burgers/burger2.webp';
+import burger3 from './assets/burgers/burger3.webp';
+import burger4 from './assets/burgers/burger4.webp';
+import burger5 from './assets/burgers/burger5.webp';
+
+import france from './assets/hotdogs/france.webp';
+import michigan from './assets/hotdogs/michigan.webp';
+import coney from './assets/hotdogs/coney.webp';
+import italian from './assets/hotdogs/Italian.webp';
+import chili from './assets/hotdogs/chili.webp';
+
+import bafallo from './assets/pizza/bafallo.webp';
+import carbonara from './assets/pizza/carbonara.webp';
+import hawaiian from './assets/pizza/hawaiian.webp';
+import margarita from './assets/pizza/margarita.webp';
+import peperoni from './assets/pizza/peperoni.webp';
+
+import free from './assets/setMenu/freepotates.webp';
+import salmon from './assets/setMenu/salmon.webp';
+import bbq from './assets/setMenu/bbq.webp';
+import bolognese from './assets/setMenu/spaghetti-bolognese.webp';
+import carbonaraSp from './assets/setMenu/spaghetti-carbonara.webp';
 
 const listOfProducts = [
     { id: 1, title: 'Beef Bulgogi', img: `${beefBulgogi}`, price: 41 },
