@@ -28,7 +28,7 @@ const Main = () => {
                             </div>
                         </div>
                         <div className={styles.contentImg}>
-                            <img src={image} alt="scooter guy" />
+                            <img src={image} width={733} height={682} alt="scooter guy" />
                         </div>
                     </section>
                 </div>
