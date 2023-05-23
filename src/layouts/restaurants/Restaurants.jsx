@@ -15,7 +15,7 @@ const Restaurants = () => {
         { id: 1, title: 'Blaze Pizza', img: card1, from: '11.00', to: '10.00' },
         { id: 2, title: 'Pizza Ranch', img: card2, from: '09.00', to: '10.00' },
         { id: 3, title: 'Dion’s Pizza Hut', img: card3, from: '10.00', to: '12.00' },
-        { id: 4, title: 'Royel Burger', img: card4, from: '11.00', to: '10.00' },
+        { id: 4, title: 'Royal Burger', img: card4, from: '11.00', to: '10.00' },
         { id: 5, title: 'KFC Restaurant', img: card5, from: '09.00', to: '10.00' },
         { id: 6, title: 'Star Food', img: card6, from: '10.00', to: '12.00' }
     ]
@@ -23,7 +23,7 @@ const Restaurants = () => {
     return (
         <section className='container'>
             <h2 className={styles.title}>
-                Top Food <span className='helpColor'>restaurant</span>
+                Top Food <span className='helpColor'>restaurants</span>
             </h2>
             <div className={styles.cards}>
                 {

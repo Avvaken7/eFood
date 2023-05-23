@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
 
 import styles from './contact.module.css';
 
@@ -21,23 +21,25 @@ const Contact = () => {
                         <input
                             type="text"
                             className={styles.contactInputForm}
-                            placeholder="First name" {...register("First name",
+                            placeholder="First name *" {...register("First name",
                                 { required: true, maxLength: 80 })}
                         />
                         <input
                             type="text"
                             className={styles.contactInputForm}
-                            placeholder="Last name" {...register("Last name",
+                            placeholder="Last name *" {...register("Last name",
                                 { required: true, maxLength: 100 })}
                         />
                         <input
                             type="tel"
                             className={styles.contactInputForm}
-                            placeholder="Mobile number" {...register("Mobile number",
+                            placeholder="Mobile number *" {...register("Mobile number",
                                 { required: true, minLength: 6, maxLength: 12 })}
                         />
                         <textarea
-                            className={styles.contactInputForm} {...register("Title",
+                            className={styles.contactInputForm} 
+                            placeholder="Text us everythink you want... *" 
+                            {...register("Title",
                                 { required: true, min: 5, maxLength: 498 })}
                         />
                         <input

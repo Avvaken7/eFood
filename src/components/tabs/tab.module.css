@@ -8,7 +8,7 @@
     background-color: white;
     color: var(--primaryColor);
     padding: 0.8125rem .25rem;
-    border-radius: .5rem;
+    border-radius: .75rem;
     text-transform: capitalize;
 }
 

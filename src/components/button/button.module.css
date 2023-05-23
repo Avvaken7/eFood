@@ -70,7 +70,7 @@
     color: var(--primaryColor);
     font-size: 1.25rem;
     line-height: 1.5rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--secondaryColor);
     padding: .65rem 1.2rem;
     border-radius: 5px;
     background: transparent;

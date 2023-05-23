@@ -14,54 +14,8 @@ import styles from './footer.module.css';
 
 const Footer = () => {
 
-    const serviceLink = [
-        { id: 1, link: 'How it works' },
-        { id: 2, link: 'Home delivery' },
-        { id: 3, link: 'Products' },
-        { id: 4, link: 'Menu' },
-        { id: 5, link: 'About Us' },
-        { id: 6, link: 'News' },
-        { id: 7, link: 'Our trusted partner' },
-        { id: 8, link: 'New users FAQ' },
-        { id: 9, link: 'Help center' },
-        { id: 10, link: 'Feedback' },
-        { id: 11, link: 'Contact us' },
-        { id: 12, link: 'Terms' },
-        { id: 13, link: 'Download app' },
-        { id: 14, link: 'Blog' },
-        { id: 15, link: 'What’s new' },
-        { id: 16, link: 'Sitemap' },
-    ]
-
-    const columns = Math.ceil(serviceLink.length / 4);
-
-    const firstColumn = serviceLink.slice(0, columns).map(item => {
-        return <li key={item.id}>
-            <a href="/">{item.link}</a>
-        </li>
-    });
-
-    const secondColumn = serviceLink.slice(4, 8).map(item => {
-        return <li key={item.id}>
-            <a href="/">{item.link}</a>
-        </li>
-    });
-
-    const thirdColumn = serviceLink.slice(8, 12).map(item => {
-        return <li key={item.id}>
-            <a href="/">{item.link}</a>
-        </li>
-    });
-
-    const fourthColumn = serviceLink.slice(12, 16).map(item => {
-        return <li key={item.id}>
-            <a href="/">{item.link}</a>
-        </li>
-    });
-
     const today = new Date();
     const year = today.getFullYear();
-
 
     return (
         <footer>
@@ -101,19 +55,39 @@ const Footer = () => {
                     <div className={styles.nav}>
                         <div className={styles.navItem}>
                             <span>Service</span>
-                            <ul className={styles.footerList}>{firstColumn}</ul>
+                            <ul className={styles.footerList}>
+                                <li><a href="/">How it works</a></li>
+                                <li><a href="/">Home delivery</a></li>
+                                <li><a href="/">Products</a></li>
+                                <li><a href="/">Menu</a></li>
+                            </ul>
                         </div>
                         <div className={styles.navItem}>
                             <span>Company</span>
-                            <ul className={styles.footerList}>{secondColumn}</ul>
+                            <ul className={styles.footerList}>
+                                <li><a href="/">About Us</a></li>
+                                <li><a href="/">News</a></li>
+                                <li><a href="/">Our trusted partner</a></li>
+                                <li><a href="/">New users FAQ</a></li>
+                            </ul>
                         </div>
                         <div className={styles.navItem}>
                             <span>Supports</span>
-                            <ul className={styles.footerList}>{thirdColumn}</ul>
+                            <ul className={styles.footerList}>
+                                <li><a href="/">Help center</a></li>
+                                <li><a href="/">Feedback</a></li>
+                                <li><a href="/">Contact us</a></li>
+                                <li><a href="/">Terms</a></li>
+                            </ul>
                         </div>
                         <div className={styles.navItem}>
                             <span>Resources</span>
-                            <ul className={styles.footerList}>{fourthColumn}</ul>
+                            <ul className={styles.footerList}>
+                                <li><a href="/">Download app</a></li>
+                                <li><a href="/">Blog</a></li>
+                                <li><a href="/">What’s new</a></li>
+                                <li><a href="/">Sitemap</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

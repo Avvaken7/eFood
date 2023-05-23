@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import downloadApp from '../../assets/mobileapp.webp';
 import appStore from '../../assets/download_appstore.svg';

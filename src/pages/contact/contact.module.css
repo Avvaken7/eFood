@@ -20,6 +20,16 @@
     min-width: 50%;
 }
 
+textarea.contactInputForm {
+    resize: none;
+}
+
+@media screen and (max-width: 767px) {
+    .contactForm {    
+        min-width: 90%;
+    }
+  }
+
 .contactInputForm {
     font-size: 1rem;
     border-radius: .3rem;

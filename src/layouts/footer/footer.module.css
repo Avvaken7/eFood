@@ -124,7 +124,7 @@ hr {
     color: #969696;
     opacity: .2;
     margin: 1.5625rem 0;
-    
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -143,14 +143,14 @@ hr {
 
 @media screen and (max-width: 1023px) {
     .content {
-        flex-direction: column;   
+        flex-direction: column;
     }
 
     .info {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        order: 2;       
+        order: 2;
     }
 
     .nav {
@@ -169,6 +169,7 @@ hr {
 }
 
 @media screen and (max-width: 767px) {
+
     .nav {
         flex-wrap: wrap;
     }
@@ -185,8 +186,7 @@ hr {
 
 @media screen and (max-width: 576px) {
     .nav {
-        flex-direction: column;
-        gap: 2rem;
+        display: none;
     }
 
     .navItem {

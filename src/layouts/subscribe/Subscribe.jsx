@@ -1,36 +1,17 @@
-import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 import icon from '../../assets/subscribe_icon.svg';
 import styles from './subscribe.module.css';
 
 const Subscribe = () => {
 
-    const [input, setInput] = useState('');
-    const [error, setError] = useState(false);
+    const { register, handleSubmit, reset, formState: { errors, isSubmitted } } = useForm();
 
-    const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-
-    const validateForm = (e) => {
-        if (e.target?.value && e.target.value.match(isValidEmail)) {
-            setError(false);
-            setInput(e.target.value);
-        } else {
-            setError(true);
-        }
+    const onSubmit = (data) => {
+        console.log(JSON.stringify(data));
+        reset();
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (input && input.match(isValidEmail)) {
-            saveEmail(input);
-        } else {
-            console.log("Email invalid!");
-        }
-    };
-
-    const saveEmail = (input) => {
-        console.log("Email saved: ", input);
-    };
 
     return (
         <section className={styles.subscribe}>
@@ -38,14 +19,27 @@ const Subscribe = () => {
                 <div className={styles.contentBlock}>
                     <h3>Subscribe to the Latest Offer</h3>
                     <p className={styles.contentText}>Get our daily updates by subscribing to our newspaper, please drop your email below</p>
-                    <form action="submit" className={styles.form}>
+                    {errors.mail ?
+                        <div className={styles.labelMessage} role="alert">{errors.mail?.message}</div>
+                        :
+                        <div className={styles.labelMessage}>{isSubmitted ? 'Thanks for you subscribe!' : null}</div>
+                    }
+                    <form
+                        action="submit"
+                        className={styles.form}
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
                         <input
-                            type="email"
-                            onChange={validateForm}
-                            placeholder='Enter your email addres'
-                            className={error ? styles.error : styles.inputForm}
-                            required />
-                        <button type="submit" onClick={handleSubmit} className={styles.buttonSubmit}>
+                            {...register("mail", {
+                                required: "Email Address is required",
+                                pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+                            })
+                            }
+                            placeholder='Enter your email...'
+                            aria-invalid={errors.mail ? "true" : "false"}
+                            className={styles.inputForm}
+                        />
+                        <button type="submit" className={styles.buttonSubmit}>
                             <img src={icon} alt="subscribe" />
                             Subscribe
                         </button>

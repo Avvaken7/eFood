@@ -55,6 +55,10 @@
 
 @media (max-width: 576px) {
 
+    .cardImg {
+        opacity: 1;
+    }
+
     .card:nth-child(1),
     .card:nth-child(3),
     .card:nth-child(5) {

@@ -24,7 +24,7 @@ const Delivery = () => {
                         <div className={styles.deliveryItems}>
                             <div className={styles.item}>
                                 <FontAwesomeIcon icon={faStopwatch} size={'2x'} color={'#F99462'} className={styles.icon}/>
-                                <span>fasted delivery in 30 Minutes</span>
+                                <span>fast delivery in 30 Minutes</span>
                             </div>
                             <div className={styles.item}>
                                 <FontAwesomeIcon icon={faTruckFast} size={'2x'} color={'#63CBFE'} className={styles.icon}/>
@@ -32,7 +32,7 @@ const Delivery = () => {
                             </div>
                             <div className={styles.item}>
                                 <FontAwesomeIcon icon={faShop} size={'2x'} color={'#FF7070'} className={styles.icon}/>
-                                <span>500+ restaurant & cafe shop</span>
+                                <span>500+ restaurants & coffee shops</span>
                             </div>
                         </div>
                         <Button variant={'rounded'}>See More</Button>

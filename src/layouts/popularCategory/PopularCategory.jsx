@@ -28,7 +28,7 @@ const PopularCategory = () => {
         <>
             <section className={styles.popular}>
                 <div className='container'>
-                    <h2 className={styles.popularTitle}>Our popular <span className='helpColor'>Category</span></h2>
+                    <h2 className={styles.popularTitle}>Our popular <span className='helpColor'>Categories</span></h2>
                     <div className={styles.popularWrapper}>
                         <ul className={styles.popularTabs}>
                             <Tab tabId='tab1' activeTab={activeTab} setActiveTab={setActiveTab}>
